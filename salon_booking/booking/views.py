@@ -10,13 +10,16 @@ from .serializers import *
 class ServiceApiView(viewsets.ModelViewSet):
     queryset = Services.objects.all()
     serializer_class = ServiceSerializer
-
+    authentication_classes = []
+    permission_classes = []
 
 class SchedApiView(viewsets.ModelViewSet):
     queryset = Schedule.objects.all()
     serializer_class = SchedSerializer
-
+    
 
 class UserApiView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerialzier
+    authentication_classes = []
+    permission_classes = []
