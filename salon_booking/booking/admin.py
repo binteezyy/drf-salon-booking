@@ -8,7 +8,7 @@ class PostServices(admin.ModelAdmin):
 
 
 class PostSchedule(admin.ModelAdmin):
-    list_display = ('user', 'service', 'sched')
+    list_display = ('user', 'service', 'sched_date', 'sched_time')
 
 
 admin.site.register(Services, PostServices)

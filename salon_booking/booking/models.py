@@ -17,10 +17,11 @@ class Services(models.Model):
 class Schedule(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     service = models.OneToOneField(Services, on_delete=models.CASCADE)
-    sched = models.DateTimeField()
+    sched_date = models.DateField()
+    sched_time = models.TimeField()
 
     def __str__(self):
-        return f'{self.user.username} - {self.service.name} - {self.sched}'
+        return f'{self.user.username} - {self.service.name} - {self.sched_date} - {self.sched_time}'
 
     class Meta:
-        unique_together = ['user', 'service', 'sched']
+        unique_together = ['user', 'service', 'sched_date']
