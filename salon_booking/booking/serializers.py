@@ -14,7 +14,6 @@ class SchedSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Schedule
         fields = ('id', 'user', 'service', 'sched_date', 'sched_time')
-        depth = 1
 
 class UserSerialzier(serializers.HyperlinkedModelSerializer):
     class Meta:
