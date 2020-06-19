@@ -8,5 +8,5 @@ router.register('schedules', SchedApiView)
 router.register('users', UserApiView)
 
 urlpatterns = [
-    path("", include(router.urls))
+    path("", include(router.urls)),
 ]
