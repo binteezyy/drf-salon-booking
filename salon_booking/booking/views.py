@@ -24,6 +24,5 @@ class SchedApiView(viewsets.ModelViewSet):
 class UserApiView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerialzier
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['id', 'username',]
